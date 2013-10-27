@@ -466,7 +466,7 @@
 <!--            2.或直接复制下载：<a l= "" class="" href="javascript:void(0);"></a>-->
 <!--        </span>-->
         <span>
-            2.或直接复制下载：(已全选，按ctrl+c或者右键复制)
+            2.或直接复制下载：<a>(已全选，按ctrl+c或者右键复制)</a>
         </span>
         <span class="last">
             <textarea name="down_link_t" readonly="readonly" id="down_link_t"></textarea>
