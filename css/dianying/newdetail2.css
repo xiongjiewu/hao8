@@ -762,10 +762,6 @@ div.watchLink_list span.downlink_list:hover {
 }
 .error_notice span a {
     color: #08A6CD;
-    cursor: pointer;
-}
-.error_notice span a:hover {
-    text-decoration: underline;
 }
 .down_error_all {
     background-color: #EEEEEE;
