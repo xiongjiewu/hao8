@@ -41,6 +41,12 @@ class Play extends MY_Controller {
             $this->jump_to("/error/index/1/");
             exit;
         }
+        //更新影片播放次数
+        $this->Backgroundadmin->updateDetailInfo($id,array("playNum" => $dyInfo['playNum'] + 1));
+
+        //页面有样式问题，暂时直接跳转
+        redirect($watchLinkInfo[$watchId]['link'], true);
+        exit;
         $watchInfo = $watchLinkInfo[$watchId];
         $this->set_attr("watchInfo",$watchInfo);
         unset($watchLinkInfo[$watchId]);
@@ -63,8 +69,6 @@ class Play extends MY_Controller {
         }
         $this->set_attr("userWatchInfo",$userWatchInfo);
 
-        //更新影片播放次数
-        $this->Backgroundadmin->updateDetailInfo($id,array("playNum" => $dyInfo['playNum'] + 1));
         $this->load->set_title("{$dyInfo['name']}{$watchInfo['beizhu']} 在线观看 - "  . $this->base_title .  " - " . APF::get_instance()->get_config_value("base_name"));
         $this->load->set_css(array("css/dianying/play.css"));
         $this->load->set_js(array("js/dianying/play.js"));
