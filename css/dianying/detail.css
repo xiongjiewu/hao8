@@ -1,0 +1,341 @@
+div.row {
+    margin: 0 auto;
+    width: 100%;
+}
+ul.dy_bs-docs-sidenav {
+    position: fixed;
+}
+.dy_detail {
+    padding-top: 35px;
+}
+.bs-docs-example table {
+    width: 100%;
+}
+table tr td.dy_info_img {
+    width: 200px;
+    padding: 0 10px 10px 10px;
+    valign:top;
+}
+.bs-docs-example table tr td table {
+    width: 98%;
+}
+table tr td.dy_info_img img {
+    min-height: 150px;
+    min-width: 150px;
+    width: 180px;
+    height: 250px;
+}
+div.bs-docs-sidebar {
+    float: left;
+    margin-top: 40px;
+    margin-left: 0;
+    width: 24%;
+}
+.pllist {
+    height: auto;
+    margin-top: 30px;
+    width: 97%;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+
+.pllist * {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.pllist table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td.userPro {
+    vertical-align: top;
+    width: 75px;
+    height: 67px;
+}
+
+.pllist table th, td, caption {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: top;
+}
+
+.pllist table .left {
+    float: left;
+    width: 70%;
+    height: 40%;
+}
+
+.pllist table  .userPro img {
+    float: left;
+    display: inline;
+    color: transparent;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    padding: 2px;
+    width: 70%;
+    height: 40%;
+    min-width: 50px;
+    min-height: 40px;
+}
+.commentTextList {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.pllist .comment {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 0 0 11px;
+}
+
+
+.pllist .info {
+    clear: both;
+    color: #BBBBBB;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pllist .right {
+    float: right;
+}
+
+.info .right .reply {
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+}
+
+.info .right .reply {
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+}
+
+.word {
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-indent: 0;
+    word-break: break-all;
+}
+
+div.detail_right {
+    float: right;
+    height: 200px;
+    margin: 10px;
+    width: 165px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+div.detail_right  div.detail_right_title {
+    font-size: 14px;
+    float: left;
+    padding: 7px;
+    width: 92%;
+    background: url("../../images/menu_bar.gif") repeat scroll -1px 0 transparent;
+}
+
+div.detail_right  div.detail_right_list {
+    font-size: 12px;
+    margin: 10px;
+    float: left;
+}
+
+div.detail_right  div.detail_right_list ul li {
+    width: 100%;
+    margin: 5px 0;
+}
+div.create_post {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+    height: 210px;
+}
+div.create_post_button {
+    float: left;
+    margin-top: 20px;
+    height: 30px;
+}
+div.create_post_button input {
+    height: 30px;
+    background-image: url("../../images/menu_bg.gif");
+    border: 1px solid #aaa;
+    width: 100px;
+    cursor: pointer;
+}
+div.create_post_button span {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.pllist .lastOne {
+    border-bottom: none;
+}
+.pllist .notFirst {
+   margin-top: 10px;
+}
+.left a,.left a:hover {
+    text-decoration: none;
+    color: #0088CC;
+}
+table.dy_detail_table tr td table.dy_info_table tr td {
+    border: none;
+}
+span.shoucang {
+    margin-top: 20px;
+    padding: 2px 5px;
+}
+span.shoucang_do {
+    color: #aaa;
+    margin-top: 20px;
+    padding: 2px 5px;
+    cursor: default;
+}
+span.dy_notic {
+    margin-top: 20px;
+    padding: 2px 10px;
+    color: #333;
+}
+span.dy_notic_btn {
+    margin-top: 20px;
+    color: #aaa;
+    padding: 2px 5px;
+    cursor: default;
+}
+div.read_more {
+    margin: 5px;
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #CEE1EE;
+    text-align: center;
+    cursor: pointer;
+    color: #336699;
+    font-weight: bold;
+    background-color: #F0F5F8;
+}
+div.read_more_load {
+    color: #fff;
+    background: url("/images/icon/move.gif") no-repeat scroll 50% 50% #FFFFFF;
+}
+div.bs-docs-example{
+    width: 96%;
+    float: left;
+    margin: 0;
+}
+table.table-bordered {
+    *width: 960px;
+}
+table.dy_info_table tr td span.name {
+    font-size: 17px;
+}
+ul.bs-docs-sidenav {
+    float: left;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0;
+    position: fixed;
+    filter:alpha(Opacity=80);
+    -moz-opacity:0.5;
+    opacity: 0.6;
+    background: none;
+}
+ul.bs-docs-sidenav li a {
+    color: #999;
+    width: 90px;
+    float: left;
+}
+div.span9 {
+    float: left;
+    margin-left: -10%;
+    width: 86%;
+}
+ul.bs-docs-sidenav li a.click {
+    color: #fff;
+    background-color: #0088CC;
+}
+ul.bs-docs-sidenav-over {
+    opacity: 1;
+    filter:alpha(Opacity=100);
+    -moz-opacity:1;
+}
+ul.bs-docs-sidenav li a:hover {
+    background-color: #0088CC;
+    color: #fff;
+}
+div.baidu_share {
+    float: left;
+    margin: 10px 0 10px 0;
+}
+div.user_add {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #0088cc;
+    margin-top: 10px;
+    *margin-top: 0;
+}
+div.add_link {
+    display: none;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    *margin-top: 0;
+}
+div.add_link * {
+    float: left;
+}
+div.add_link select.link_type {
+    width: 100px;
+    margin-right: 10px;
+    height: 26px;
+    *padding: 5px 0;
+}
+div.add_link input.add_input {
+    height: 15px;
+}
+div.add_link input.add_submit,div.add_link input.add_cancel {
+    height: 25px;
+    margin-left: 5px;
+}
+div.watchLink_info {
+    float: left;
+    width: 100%;
+    border:1px solid #ddd;
+    margin-bottom: 20px;
+}
+div.watchLink_info table.table {
+    margin-bottom: 0;
+}
+div.watchLink_info table.table tr.tr_over {
+    background-color: #eee;
+    cursor: pointer;
+}
+div.watchLink_info table.table tr th {
+    border: none;
+    text-align: center;
+    background-color: #FFFDE3;
+    color: #666;
+}
+div.watchLink_info table.table tr td {
+    text-align: center;
+    font-size: 13px;
+}
+section {
+    float: left;
+    width: 100%;
+}
+section#createpost {
+    *margin-top: 20px;
+}
+div.header_search div.form_info div.about_search ul li div.about_info_list div.about_info_list_detail table tr em {
+    color: #EE6100;
+    font-style: normal;
+}

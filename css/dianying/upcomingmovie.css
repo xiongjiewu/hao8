@@ -1,0 +1,304 @@
+div.upcoming_main {
+    width: 1200px;
+    margin: 0 auto;
+}
+.dy_detail {
+    padding-top: 35px;
+}
+div.upcoming_main table {
+    background-color: #FFFFFF;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 3px #ddd;
+}
+div.upcoming_main table tr td {
+    padding: 10px;
+}
+div.upcoming_main table:hover {
+    background-color: #e0eeee;
+}
+table tr td.dy_info_img {
+    width: 200px;
+    padding: 0 10px 10px 10px;
+    valign:top;
+}
+div.upcoming_main table tr td table {
+    width: 98%;
+}
+table tr td.dy_info_img img {
+    min-height: 150px;
+    min-width: 150px;
+    width: 180px;
+    height: 250px;
+}
+div.bs-docs-sidebar {
+    margin-top: 15px;
+}
+.pllist {
+    height: auto;
+    margin-top: 30px;
+    width: 97%;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+
+.pllist * {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.pllist table {
+    width: 95%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.userPro {
+    vertical-align: top;
+    width: 75px;
+}
+
+.pllist table th, td, caption {
+    font-weight: normal;
+    text-align: left;
+    vertical-align: top;
+}
+
+.pllist table .left {
+    float: left;
+}
+
+.pllist table  .userPro img {
+    display: inline;
+    color: transparent;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    padding: 2px;
+}
+.commentTextList {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+.pllist .comment {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 0 0 11px;
+}
+
+
+.pllist .info {
+    clear: both;
+    color: #BBBBBB;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.pllist .right {
+    float: right;
+}
+
+.info .right .reply {
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+}
+
+.info .right .reply {
+    font-size: 14px !important;
+    letter-spacing: 0 !important;
+}
+
+.word {
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-indent: 0;
+    word-break: break-all;
+}
+
+div.detail_right {
+    float: right;
+    height: 200px;
+    margin: 10px;
+    width: 165px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+div.detail_right  div.detail_right_title {
+    font-size: 14px;
+    float: left;
+    padding: 7px;
+    width: 92%;
+    background: url("../../images/menu_bar.gif") repeat scroll -1px 0 transparent;
+}
+
+div.detail_right  div.detail_right_list {
+    font-size: 12px;
+    margin: 10px;
+    float: left;
+}
+
+div.detail_right  div.detail_right_list ul li {
+    width: 100%;
+    margin: 5px 0;
+}
+div.create_post {
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+    height: 210px;
+}
+div.create_post_button {
+    float: left;
+    margin-top: 20px;
+    height: 30px;
+}
+div.create_post_button input {
+    height: 30px;
+    background-image: url("../../images/menu_bg.gif");
+    border: 1px solid #aaa;
+    width: 100px;
+    cursor: pointer;
+}
+div.create_post_button span {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.pllist .lastOne {
+    border-bottom: none;
+}
+.pllist .notFirst {
+    margin-top: 10px;
+}
+.left a,.left a:hover {
+    text-decoration: none;
+    color: #0088CC;
+}
+table.dy_detail_table tr td table.dy_info_table tr td {
+    border: none;
+}
+span.shoucang {
+    margin-top: 20px;
+    padding: 2px 5px;
+}
+span.shoucang_do {
+    color: #aaa;
+    margin-top: 20px;
+    padding: 2px 5px;
+    cursor: default;
+}
+span.dy_notic {
+    margin-top: 20px;
+    padding: 2px 10px;
+    color: #333;
+}
+span.dy_notic_btn {
+    margin-top: 20px;
+    color: #aaa;
+    padding: 2px 5px;
+    cursor: default;
+}
+div.read_more {
+    margin: 5px;
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #CEE1EE;
+    text-align: center;
+    cursor: pointer;
+    color: #336699;
+    font-weight: bold;
+    background-color: #F0F5F8;
+}
+div.read_more_load {
+    color: #fff;
+    background: url("/images/icon/move.gif") no-repeat scroll 50% 50% #FFFFFF;
+}
+table {
+    width: 100%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+table.table tr td {
+    border-top: none;
+    color: #999;
+}
+table.firstOneT{
+    /*margin-top: 40px;*/
+}
+table.table_over {
+    background-color: #E0EEEE;
+}
+table.table tr.lastOne td {
+    border-bottom: none;
+}
+table.table tr td.dy_name {
+    width: 145px;
+    text-align: center;
+    line-height:90px;
+}
+table.table tr td.dy_name img{
+    width: 140px;
+    height: 90px;
+    float: left;
+    margin-left: 2px;
+    margin-top: 3px;
+    border: 1px solid #eee;
+}
+table.table tr td.dy_name div.dy_name_detail {
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+table.table tr td.dy_name span {
+    position: absolute;
+    bottom: 0;
+    left: 3px;
+    line-height: 18px;
+    width: 140px;
+    height: 20px;
+    font-size: 13px;
+    color: #fff;
+    background: none repeat scroll 0 0 #000000;
+    filter:alpha(Opacity=75);
+    -moz-opacity:0.75;
+    opacity: 0.75;
+    font-weight: bold;
+    overflow: hidden;
+}
+table.table tr td.dy_name a {
+    font-weight: bold;
+    font-size: 15px;
+}
+table.table tr td span {
+    color: #aaa;
+}
+table.table tr td strong {
+    color: #888;
+}
+table.table tr td span.btn {
+    background-color: #EEEEEE;
+    border: 1px solid #ccc;
+    color: #333333;
+    padding: 1px 12px;
+}
+table.table tr td span.dy_notic_btn {
+    color: #aaa;
+    cursor: default;
+    margin: 0;
+}
+span.dy_notic {
+    margin-top: 0;
+}
+table.table-bordered {
+    width: 98%;
+}

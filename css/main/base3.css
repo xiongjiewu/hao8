@@ -1,0 +1,395 @@
+div.new_head {
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #2a2931;
+    /*background: url("/images/newhead/daohang_bg.png") repeat 0 0 transparent;*/
+    z-index: 100102;
+}
+div.new_head_mian {
+    width: 1245px;
+    height: 100%;
+    margin: 0 auto;
+}
+div.new_head_mian ul {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+div.new_head_mian ul li {
+    float: left;
+    height: 100%;
+    line-height: 50px;
+    padding: 0 10px;
+    position: relative;
+}
+div.new_head_mian ul li a {
+    float: left;
+    color: #eee;
+    font-size: 14px;
+}
+div.new_head_mian ul li a:hover {
+    text-decoration: underline;
+}
+div.new_head_mian ul li a.current {
+    color: #08A6BC;
+}
+div.new_head_mian ul li i.new {
+    background: url("/images/common/header_icon_li.png") no-repeat scroll 0 -390px transparent;
+    color: red;
+    height: 17px;
+    left: 50px;
+    position: absolute;
+    top: 3px;
+    width: 29px;
+}
+div.new_head_mian ul li .menu_list {
+    position: absolute;
+    display: none;
+    top: 50px;
+    left: 0;
+    z-index: 101;
+    background-color: #000;
+    width: 88px;
+}
+div.new_head_mian ul li .menu_list span a {
+    float: left;
+    width: 74px;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px;
+    padding-right: 4px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+div.new_head_mian ul li .menu_list span a:hover {
+    background-color: #08A6BC;
+    color: #fff;
+}
+div.new_head_mian ul li.list {
+    padding-right: 7px;
+}
+div.new_head_mian ul li.list:hover {
+    background-color: #000;
+}
+div.new_head_mian ul li.list:hover i.list,div.new_head_mian ul li.look:hover i {
+    background-position: -11px -55px;
+}
+div.new_head_mian ul li.list:hover .menu_list {
+    display: block;
+}
+div.new_head_mian ul li span.current_list a {
+    color: #08A6BC;
+}
+
+div.new_head_mian ul li.new_logo {
+    margin: 0;
+    padding: 0;
+}
+div.new_head_mian ul li.new_logo a {
+    /*background: url("/images/newhead/detail_sucai3.png") no-repeat scroll 1px -203px transparent;*/
+    background: url("/images/newhead/hao8daohang.png") no-repeat scroll -26px 0 transparent;
+    color: #A4A4A4;
+    font-family: "time new roma";
+    font-size: 18px;
+    height: 50px;
+    line-height: 35px;
+    padding-left: 65px;
+    text-decoration: none;
+    width: 65px;
+}
+div.new_head_mian ul li span.fenge_line {
+    float: left;
+    /*background: none repeat scroll 0 0 #DADADA;*/
+    border-right: 1px solid #9e9e9e;
+    float: left;
+    height: 15px;
+    width: 1px;
+    margin-top: 18px;
+}
+div.new_head_mian ul li.search_k {
+    /*border: 1px solid #BBBBBB;*/
+    height: 32px;
+    margin-top: 8px;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    width: 320px;
+}
+div.new_head_mian ul li.search_k .search_l {
+    float: left;
+    height: 100%;
+    width: 5px;
+    background: url("/images/newhead/hao8daohang.png") no-repeat scroll -1px -2px
+}
+div.new_head_mian ul li.search_k .search_r {
+    float: left;
+    height: 100%;
+    width: 5px;
+    background: url("/images/newhead/hao8daohang.png") no-repeat scroll -18px -2px
+}
+/*搜索框匹配填充 start*/
+div.new_head_mian ul li.search_k div.about_search {
+    background: none repeat scroll 0 0 #F1F4FB;
+    border: none;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    width: 319px;
+    z-index: 99999;
+    border-radius: 0 0 5px 5px;
+}
+div.new_head_mian ul li.search_k div.about_search ul {
+    float: left;
+    width: 100%;
+}
+div.new_head_mian ul li.search_k div.about_search ul li {
+    color: #777777;
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    list-style: none outside none;
+    margin-top: 0;
+    padding: 10px;
+    height: 17px;
+    line-height: 17px;
+    position: relative;
+    width: 299px;
+}
+div.new_head_mian ul li.search_k div.about_search ul li.mouse_hover {
+    background-color: #08A6CD;
+    color: #fff;
+}
+div.new_head_mian ul li.search_k div.about_search ul li span.word {
+    float: left;
+}
+div.new_head_mian ul li.search_k div.about_search ul li.mouse_hover div.about_info_list table,
+div.new_head_mian ul li.search_k div.about_search ul li.mouse_hover div.about_info_list table tr th,
+div.new_head_mian ul li.search_k div.about_search ul li.mouse_hover div.about_info_list table tr th
+{
+    color: #777;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list {
+    display: none;
+    background-color: #F1F4FB;
+    border: 1px solid #ddd;
+    height: 210px;
+    left: 318px;
+    padding: 10px;
+    position: absolute;
+    top: -1px;
+    width: 300px;
+    cursor: default;
+    z-index: 100000;
+}
+div.new_head_mian ul li.search_k div.about_search ul li.mouse_hover div.about_info_list{
+    display: block;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_img {
+    float: left;
+    width: 100px;
+    height: 150px;
+    background-color: #F1F4FB;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_img a,
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_img a img {
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail {
+    float: left;
+    width: 190px;
+    margin-left: 10px;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table {
+    float: left;
+    background-color: #F1F4FB;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table a {
+    color: #555;
+    text-decoration: none;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table a:hover {
+    color: #08A6CD;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table a.about_info_list_detail_play {
+    color: #08A6CD;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table tr th,
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table tr td {
+    text-align: left;
+    font-size: 14px;
+    width: 190px;
+    float: left;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table tr td {
+    height: 16px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table tr td.jianjie {
+    height: 50px;
+}
+div.new_head_mian ul li.search_k div.about_search ul li div.about_info_list div.about_info_list_detail table tr td a.about_info_list_detail_play {
+    float: left;
+}
+/*搜索框匹配填充 end*/
+div.new_head_mian ul li.search_k input.search_n {
+    float: left;
+    width: 282px;
+    height: 29px;
+    line-height: 29px;
+    margin-top: 1px;
+    padding-right: 2px;
+    border: none;
+    color: #aaa;
+    background-color: #f1f4fb;
+}
+div.new_head_mian ul li.search_k div.submit_do {
+    float: left;
+    height: 31px;
+    width: 25px;
+    border: none;
+    margin-top: 1px;
+    background-color: #f1f4fb;
+    /*border-left:1px solid #bbb;*/
+    cursor: pointer;
+}
+div.new_head_mian ul li.search_k div.submit_do input.su_button {
+    background: url("/images/newhead/hao8daohang.png") no-repeat scroll -1px -35px #EEEEEE;
+    border: medium none;
+    float: left;
+    height: 20px;
+    margin-top: 6px;
+    width: 100%;
+    cursor: pointer;
+}
+div.new_head_mian ul li.look {
+    margin-top: 0;
+    /*padding-top: 8px;*/
+    padding-right: 4px;
+    position: relative;
+    width: 80px;
+    cursor: pointer;
+}
+div.new_head_mian ul li.look:hover {
+    width: 78px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    background-color: #000;
+}
+div.new_head_mian ul li.look a {
+    margin-left: 1px;
+}
+div.new_head_mian ul li.look i,
+div.new_head_mian ul li i.list {
+    /*background: url("/images/newhead/detail_sucai3.png") no-repeat scroll -201px -33px transparent;*/
+    background: url("/images/newhead/hao8daohang.png") no-repeat scroll -1px -55px transparent;
+    float: left;
+    height: 9px;
+    margin-left: 5px;
+    margin-top: 21px;
+    width: 10px;
+}
+div.new_head_mian ul li.look div.look_info {
+    position: absolute;
+    width: 120px;
+    right: -1px;
+    top: 50px;
+    background-color: #000;
+    z-index: 10019;
+    border: 1px solid #000;
+    border-top: none;
+    display: none;
+    cursor: default;
+    padding: 10px;
+    color: #fff;
+}
+div.new_head_mian ul li.look div.look_info ul {
+    float: left;
+    width: 100%;
+}
+div.new_head_mian ul li.look div.look_info ul li {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 5px;
+    line-height: 25px;
+}
+div.new_head_mian ul li.look div.look_info ul li a {
+    color: #fff;
+}
+div.new_head_mian ul li.look div.look_info ul li span {
+    float: right;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+div.new_head_mian ul li.look div.look_info ul li:hover a,div.new_head_mian ul li.look div.look_info ul li span a {
+    color: #08A6CD;
+}
+div.new_head_mian ul li.login {
+    margin-left: 15px;
+}
+div.new_head_mian ul li.username {
+    margin-left: 5px;
+    /*width: 80px;*/
+    /*height: 42px;*/
+    overflow: hidden;
+    /*padding-top: 8px;*/
+    margin-top: 0;
+    position: relative;
+}
+div.new_head_mian ul li.username i,
+div.new_head_mian ul li.login i {
+    background: url("/images/common/shouye_new_sucai.png") repeat scroll -292px -2px transparent;
+    /*float: left;*/
+    padding: 10px;
+}
+div.new_head_mian ul li.register i {
+    background: url("/images/common/shouye_new_sucai.png") repeat scroll -267px -2px transparent;
+    /*float: left;*/
+    padding: 10px;
+}
+div.new_head_mian ul li.username:hover {
+    /*background-color: #fff;*/
+}
+div.new_head_mian ul li.username a.logout {
+    font-size: 13px;
+}
+div.new_head_mian ul li.username div.user_account {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background-color: #fff;
+    left: 0;
+    top: 35px;
+    z-index: 101;
+    display: none;
+}
+div.new_head_mian ul li.look:hover a {
+    margin-left: 0;
+    color: #fff;
+}
+div.new_head_mian ul li.look:hover div.look_info {
+    display: block;
+}
+div.container {
+    margin-top: 60px;
+}
+div.guide {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    color: #999999;
+    font-size: 13px;
+}
+div.guide a {
+    color: #010101;
+}
+div.guide a:hover {
+    color: #08a6bc;
+}
