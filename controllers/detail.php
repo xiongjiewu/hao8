@@ -155,7 +155,7 @@ class Detail extends MY_Controller {
 
         $this->load->set_title("{$dyInfo['name']} - " . $this->base_title .  " - " . APF::get_instance()->get_config_value("base_name"));
         $this->load->set_css(array("css/dianying/newdetail2.css"));
-        $this->load->set_js(array("js/dianying/newdetail2.js"));
+        $this->load->set_js(array("js/ZeroClipboard/ZeroClipboard.js","js/dianying/newdetail2.js"));
         
         $this->set_attr("dyInfo",$dyInfo);
         $this->set_attr("watchLinkInfo",$watchLinkInfo);

@@ -39,12 +39,12 @@ var init = {
         }
         return true;
     },
-    ajaxDoScore:function(dyId,scoreStar,callBack) {
+    ajaxDoScore: function (dyId, scoreStar, callBack) {
         if (dyId && scoreStar) {
             $.ajax({
                 url: "/useraction/dafen/",
                 type: "post",
-                data: {dyId: dyId,scoreStar:scoreStar},
+                data: {dyId: dyId, scoreStar: scoreStar},
                 dataType: "json",
                 success: function (result) {
                     if (callBack) {
@@ -80,7 +80,7 @@ var init = {
                 window.location.reload();
                 break;
             case "score" ://打分
-                this.ajaxDoScore(dyId,scoreStart,function(result) {
+                this.ajaxDoScore(dyId, scoreStart, function (result) {
                     window.location.reload();
                 });
                 break;
@@ -254,9 +254,30 @@ var init = {
             }
         }
     },
+    showDownError: function () {
+        var obj = $("div.down_error");
+        obj.css("top", ((jQuery(window).height() - obj.height()) / 2) + "px");
+        obj.css("left", ((jQuery(window).width() - obj.width()) / 2) + "px");
+        obj.css("display", "block");
+    },
+    copyText: function (content) {
+        //新建对象
+        var clip = new ZeroClipboard.Client();
+        //设置指向光标为手型
+        clip.setHandCursor(true);
+        //通过传入的参数设置剪贴板内容
+        clip.setText(content);
+        //绑定触发对象按钮ID
+        clip.glue("b_clip_button");
+    },
     //容错函数，打开默认浏览器下载
     DownloadDefault: function (url) {
-        alert('迅雷打开失败，请先按装迅雷或使用IE内核浏览器下载或直接复制下载：<' + url + '>！');
+        var tC = $("#down_link_t");
+//        var aH = '&nbsp;&nbsp;&nbsp;<a id="b_clip_button" onmouseover="init.copyText(\'' + url + '\');">[复制下载链接]</a>';
+//        $(".error_notice span.last").html('2.或直接复制下载：' + url + aH);
+        $("div.down_error_all").show();
+        this.showDownError();
+        tC.val(url).select();
     },
     ajaxGetDownLink: function (id) {
         if (id) {
@@ -279,7 +300,7 @@ var init = {
             });
         }
     },
-    intiForm:function() {
+    intiForm: function () {
         //表单提交事件
         var submitButtonObj = $("#create_post_button");
         var cententObj = $("#content");
@@ -287,9 +308,9 @@ var init = {
         var dingObj = $(".pllist table .info span");
         if (user_id) {
             //激活表单提交事件
-            submitButtonObj.attr("disabled",false);
+            submitButtonObj.attr("disabled", false);
             //表单提交事件
-            submitButtonObj.bind("click",function() {
+            submitButtonObj.bind("click", function () {
                 var content = $.trim($("#content").val());
                 if (!content || (content == "请输入评论内容")) {
                     alert("请输入评论内容");
@@ -306,21 +327,21 @@ var init = {
                 }
             });
             //输入框focus事件
-            cententObj.bind("focus",function() {
+            cententObj.bind("focus", function () {
                 var content = $.trim($(this).val());
                 if (content == "请输入评论内容") {
                     $(this).val("");
                 }
             });
             //输入框blur事件
-            cententObj.bind("blur",function() {
+            cententObj.bind("blur", function () {
                 var content = $.trim($(this).val());
                 if (!content) {
                     $(this).val("请输入评论内容");
                 }
             });
             //顶
-            dingObj.live("click",function () {
+            dingObj.live("click", function () {
                 init.ding(this);
             });
             //收藏
@@ -328,12 +349,12 @@ var init = {
                 init.shouCangDo($(this));
             });
         } else {
-            cententObj.bind("focus",function() {
+            cententObj.bind("focus", function () {
                 logPanInit.showLoginPan("init.loginCallBack");
                 return false;
             });
             //顶
-            dingObj.live("click",function () {
+            dingObj.live("click", function () {
                 logPanInit.showLoginPan("init.loginCallBack");
             });
             //收藏
@@ -345,25 +366,27 @@ var init = {
             });
         }
     },
-    startMouseOverAndLeave:function(startCount,scoreObj,changeScore) {
-        for(var i = 1;i <= startCount;i++) {
+    startMouseOverAndLeave: function (startCount, scoreObj, changeScore) {
+        for (var i = 1; i <= startCount; i++) {
             $("a." + i + "_start").addClass("current");
             if (changeScore) {
                 scoreObj.html(i * 2);
             }
         }
-        for(var j = 5;j > startCount;j--) {
+        for (var j = 5; j > startCount; j--) {
             $("a." + j + "_start").removeClass("current");
         }
     }
 };
 (function ($) {
     $(document).ready(function () {
+        var mainHeight = $("#total_info_main").height() + $("#footer_main_total").height() + 40;
+        $("div.down_error_all").css("height", mainHeight + "px");
         var moreA = $("a.jieshao_more");
         var jieshaoMore = $("span.jieshao_list");
         var lJieShao = jieshaoMore.attr("l_jieshao");
         var sJieShao = jieshaoMore.attr("s_jieshao");
-        moreA.bind("click",function() {
+        moreA.bind("click", function () {
             var cT = $(this).html();
             if (cT == "[更多]") {
                 jieshaoMore.html(lJieShao);
@@ -373,18 +396,18 @@ var init = {
                 $(this).html("[更多]");
             }
         });
-        $("div.read_more").bind("click",function(){
+        $("div.read_more").bind("click", function () {
             var count = $("#pinglun_count").val();
             var id = $("#dy_id").val();
             if ($(this).html() == "点击查看更多...") {
                 $(this).addClass("read_more_load");
-                init.ajaxGetYingPingInfo(id,count,$(this));
+                init.ajaxGetYingPingInfo(id, count, $(this));
             }
         });
         var movieTabObj = $(".watch_down_link  .tab span");
-        movieTabObj.each(function() {
+        movieTabObj.each(function () {
             var that = $(this);
-            that.bind("mouseover",function() {
+            that.bind("mouseover", function () {
                 if (!that.hasClass("current_tab")) {
                     var removeObj = that.parent().find(".current_tab");
                     var removeType = "." + removeObj.attr("type");
@@ -405,55 +428,55 @@ var init = {
         //分享按钮事件
         var fengxiangAObj = $("li.fenxiang");
         var fenxiangButtonObj = $("div.baidufengxiang");
-        fengxiangAObj.bind("mouseover",function() {
+        fengxiangAObj.bind("mouseover", function () {
             fenxiangButtonObj.show();
         });
-        fengxiangAObj.bind("mouseleave",function() {
+        fengxiangAObj.bind("mouseleave", function () {
             fenxiangButtonObj.hide();
         });
-        fenxiangButtonObj.bind("mouseover",function() {
+        fenxiangButtonObj.bind("mouseover", function () {
             $(this).show();
         });
-        fenxiangButtonObj.bind("mouseleave",function() {
+        fenxiangButtonObj.bind("mouseleave", function () {
             $(this).hide();
         });
 
         //打分a标签,鼠标移过事件+鼠标移开事件
-        var dfAObj = $("div.dafen a"),currentA = false,tOut = null;
+        var dfAObj = $("div.dafen a"), currentA = false, tOut = null;
         var scObj = $("#current_start");
         var scoreObj = $($("div.dafen").find("span").get(1));
         var currentCount = scObj.val();
         var currentScore = scoreObj.html();
         var userId = $("#user_id").val();
-        dfAObj.each(function() {
+        dfAObj.each(function () {
             var that = $(this);
             if (!that.hasClass("hasDafen")) {
                 var startCount = that.attr("type");
-                that.bind("mouseover",function() {
-                    init.startMouseOverAndLeave(startCount,scoreObj,true);
+                that.bind("mouseover", function () {
+                    init.startMouseOverAndLeave(startCount, scoreObj, true);
                     currentA = true;
                     if (tOut) {
                         clearTimeout(tOut);
                         tOut = null;
                     }
                 });
-                that.bind("mouseleave",function() {
+                that.bind("mouseleave", function () {
                     currentA = false;
                     if (!currentA) {
-                        tOut = setTimeout(function() {
-                            init.startMouseOverAndLeave(currentCount,scoreObj,false);
+                        tOut = setTimeout(function () {
+                            init.startMouseOverAndLeave(currentCount, scoreObj, false);
                             scoreObj.html(currentScore);
-                        },1000);
+                        }, 1000);
                     }
                 });
-                that.bind("click",function() {
+                that.bind("click", function () {
                     if (!userId) {
                         $("#userStart").val(startCount);
                         $("#action").val("score");
                         logPanInit.showLoginPan("init.loginCallBack");
                     } else {
                         var dyId = $("#dy_id").val();
-                        init.ajaxDoScore(dyId,startCount,function() {
+                        init.ajaxDoScore(dyId, startCount, function () {
                             window.location.reload();
                         });
                     }
@@ -462,26 +485,30 @@ var init = {
         });
         //观看链接
         var watchSpan = $("div.watchLink_list span.watchlink_list");
-        watchSpan.each(function() {
+        watchSpan.each(function () {
             var that = $(this);
-            that.bind("click",function() {
+            that.bind("click", function () {
                 var url = $(that.find("a").get(0)).attr("href");
                 window.open(url);
             });
-            that.find("a").each(function() {
-                $(this).bind("click",function(evant) {
+            that.find("a").each(function () {
+                $(this).bind("click", function (evant) {
                     evant.stopPropagation();
                 });
             });
         });
         //回复按钮
-        $(".info .right a.reply").live("click",function () {
+        $(".info .right a.reply").live("click", function () {
             var user_id = $("#user_id").val();
             if (!user_id) {
                 logPanInit.showLoginPan();
             } else {
                 init.reply(this);
             }
+        });
+        $(".error_top .close").bind("click", function () {
+            $("div.down_error_all").hide();
+            $(this).parent().parent().hide();
         });
     })
 })(jQuery);

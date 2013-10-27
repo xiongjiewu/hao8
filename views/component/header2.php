@@ -61,7 +61,7 @@
                 <li class="username">
                     <a href="<?php echo APF::get_instance()->get_real_url("/usercenter/");?>" class="">
                         <i></i>
-                        <?php echo $userName;?>
+                        <?php echo APF::get_instance()->splitStr($userName,4);?>
                     </a>
                     <a class="logout" href="/logout/">[退出]</a>
                     <div class="user_account">

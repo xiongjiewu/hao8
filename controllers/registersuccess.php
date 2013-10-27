@@ -18,6 +18,6 @@ class Registersuccess extends MY_Controller {
         $this->load->set_head_img(false);
         $this->load->set_top_index(-1);
         $this->load->set_css(array("css/member/register.css","css/member/registersuccess.css"));
-        $this->set_view("member/registersuccess");
+        $this->set_view("member/registersuccess","base3");
     }
 }

@@ -3,7 +3,7 @@
         <div class="user-info">
             <img src="<?php echo APF::get_instance()->get_image_url($userInfo['photo']);?>">
             <dl>
-                <dt><?php echo $userInfo['userName'];?></dt>
+                <dt><?php echo APF::get_instance()->splitStr($userInfo['userName'],7);?></dt>
                 <dd style="margin-left: 0">
                     <a href="<?php echo get_url("/usercenter/revised/")?>">修改资料</a>
                 </dd>

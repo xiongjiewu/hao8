@@ -713,3 +713,77 @@ div.watchLink_list span.downlink_list {
 div.watchLink_list span.downlink_list:hover {
     text-decoration: underline;
 }
+.down_error {
+    display: none;
+    background-color: #DEDEDE;
+    border: 6px solid #7C7C7C;
+    left: 200px;
+    position: fixed;
+    top: 255px;
+    width: 440px;
+    z-index: 100001;
+}
+.error_top {
+    float: left;
+    width: 100%;
+    padding: 5px 0;
+}
+.error_title {
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+.error_top .close {
+    background: url("/images/Login/close2.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 25px;
+    float: right;
+    width: 25px;
+    margin-right: 5px;
+}
+.error_notice {
+    float: left;
+    width: 100%;
+}
+.error_notice span {
+    float: left;
+    width: 420px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #666;
+    font: 13px;
+    word-wrap: break-word;
+    word-break:break-all;
+}
+.error_notice span.last {
+    margin-bottom: 10px;
+}
+.error_notice span a {
+    color: #08A6CD;
+    cursor: pointer;
+}
+.error_notice span a:hover {
+    text-decoration: underline;
+}
+.down_error_all {
+    background-color: #EEEEEE;
+    display: none;
+    height: 100%;
+    left: 0;
+    filter:alpha(Opacity=50);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+#down_link_t {
+    float: left;
+    width: 100%;
+    background-color: #AAA;
+    padding: 5px 0;
+    font-size: 14px;
+}

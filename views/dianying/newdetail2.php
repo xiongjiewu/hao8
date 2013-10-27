@@ -451,6 +451,29 @@
     <!-- 右侧索引、排行榜 start -->
     <div class="clear"></div>
 </div>
+<!-- 下载错误提示框 start -->
+<div class="down_error_all"></div>
+<div class="down_error">
+    <div class="error_top">
+        <span class="error_title">o(∩∩)o...哈哈</span>
+        <span class="close"></span>
+    </div>
+    <div class="error_notice">
+        <span>
+            1.迅雷打开失败，请先按装迅雷或使用IE内核浏览器下载；
+        </span>
+<!--        <span class="last">-->
+<!--            2.或直接复制下载：<a l= "" class="" href="javascript:void(0);"></a>-->
+<!--        </span>-->
+        <span>
+            2.或直接复制下载：(已全选，按ctrl+c或者右键复制)
+        </span>
+        <span class="last">
+            <textarea name="down_link_t" readonly="readonly" id="down_link_t"></textarea>
+        </span>
+    </div>
+</div>
+<!-- 下载错误提示框 end -->
 <input type="hidden" name="YingpingInfoICount" id="YingpingInfoICount" value="<?php echo empty($yingpingCount) ? 0 : $yingpingCount;?>">
 <input type="hidden" name="user_type" id="user_type" value="<?php echo empty($adminInfo) ? 0 : 1;?>">
 <input type="hidden" name="limit" id="limit" value="<?php echo $limit;?>">
