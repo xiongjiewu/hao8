@@ -352,7 +352,7 @@ class Usercenter extends MY_Controller
         $this->load->set_head_img(false);
         $this->load->set_top_index(-1);
         $this->load->set_css(array("/css/user/usercenter.css"));
-        $this->load->set_js(array("js/xheditor-1.2.1/xheditor-1.2.1.min.js","js/xheditor-1.2.1/xheditor_lang/zh-cn.js","js/dianying/detail.js","/js/user/editfeedback.js"));
+        $this->load->set_js(array("js/dianying/detail.js","/js/user/editfeedback.js"));
         $this->set_view("user/editfeedback","base3");
     }
     public function delfeedback()
@@ -449,7 +449,7 @@ class Usercenter extends MY_Controller
         $this->load->set_head_img(false);
         $this->load->set_top_index(-1);
         $this->load->set_css(array("/css/user/usercenter.css"));
-        $this->load->set_js(array("js/xheditor-1.2.1/xheditor-1.2.1.min.js","js/xheditor-1.2.1/xheditor_lang/zh-cn.js","js/dianying/detail.js","/js/user/createfeedback.js"));
+        $this->load->set_js(array("js/dianying/detail.js","/js/user/createfeedback.js"));
         $this->set_view("user/createfeedback","base3");
     }
 

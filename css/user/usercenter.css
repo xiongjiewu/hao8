@@ -461,3 +461,24 @@ div.changeEmail {
     margin-left: 10px;
     margin-top: 5px;
 }
+input#title {
+    width: 300px;
+    height: 20px;
+    padding: 5px;
+    line-height: 30px;
+    border: 1px solid #aaaaaa;
+}
+textarea#content {
+    width: 500px;
+    height: 100px;
+    padding: 5px;
+    line-height: 30px;
+    border: 1px solid #aaaaaa;
+}
+input#create_post_button {
+    border: 1px solid #666;
+    height: 20px;
+    line-height: 20px;
+    width: 100px;
+    text-align: center;
+}
