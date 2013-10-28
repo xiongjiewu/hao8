@@ -35,7 +35,7 @@ class Series extends MY_Controller {
         $this->set_attr("sTabIndex",$diqu);
         $this->load->set_title("系列大片 - " . $this->base_title . " - " . APF::get_instance()->get_config_value("base_name"));
         $this->load->set_css(array("/css/main/style.css","/css/dianying/series.css"));
-        $this->load->set_js(array("/js/dianying/series.js"));
+        $this->load->set_js(array("/js/dianying/series.js","js/main/jquery.eislideshow.js","js/main/jquery.easing.1.3.js"));
         $this->set_attr("moviePlace",$this->_moviePlace);
         $this->set_attr("movieType",$this->_movieType);
         $this->set_view('dianying/series','base3');
