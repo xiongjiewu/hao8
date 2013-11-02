@@ -418,8 +418,8 @@ class Search extends MY_Controller {
             echo json_encode($result);
             exit;
         }
-        $searchMovieInfo = $this->_searchMian($word,'','','',20);
-        $searchMovieInfo = array_slice($searchMovieInfo[0],0,20);
+        $searchMovieInfo = $this->_searchMian($word,'','','',10);
+        $searchMovieInfo = array_slice($searchMovieInfo[0],0,10);
         $searchMovieInfo = $this->_getMoviceNameInfos($searchMovieInfo);
         if (!empty($searchMovieInfo)) {
             $result["code"] = "success";
@@ -471,18 +471,6 @@ class Search extends MY_Controller {
                 $result[$aV[$filed]] = $aV;
                 $ids[] = $aV[$filed];
             }
-        }
-        return $result;
-    }
-
-    private function _getNewArrById($nfo)
-    {
-        if (empty($nfo)) {
-            return $nfo;
-        }
-        $result = array();
-        foreach($nfo as $infoVal) {
-            $result[$infoVal['infoId']][] = $infoVal;
         }
         return $result;
     }
