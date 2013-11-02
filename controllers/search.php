@@ -388,9 +388,6 @@ class Search extends MY_Controller {
             $topicMovieCountList = $this->Movietopicmovie->getTopicMovieCountByTopicId($topicIdArr);
             $topicInfo = $this->_initMovieCount($topicInfo,$topicMovieCountList);
             $this->set_attr("topicInfo",$topicInfo);
-            //星座信息
-            $xingzuoInfo = APF::get_instance()->get_config_value("constellatoryInfo");
-            $this->set_attr("xingzuoInfo",$xingzuoInfo);
         }
 
         //搜索处理
