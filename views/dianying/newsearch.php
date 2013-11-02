@@ -127,6 +127,9 @@
                                 <span class="nianfen">共<em><?php echo $topicVal['movieCount'];?></em>部</span>
                             </p>
                             <p class="other">
+                                <span>点击：</span><em><?php echo $topicVal['clickNum'];?>次</em>
+                            </p>
+                            <p class="other">
                                 <span>类型：</span><?php echo $movieType[$topicVal['type']];?>
                             </p>
                             <p class="other">
