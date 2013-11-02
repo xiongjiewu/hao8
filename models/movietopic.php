@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * 专题或者系列类
+ * Class Movietopic
+ */
 class Movietopic extends CI_Model {
 
     function __construct()
@@ -144,5 +147,20 @@ class Movietopic extends CI_Model {
         $sql = "select * from `tbl_movieTopic` where {$where} limit {$offset},$limit";
         $query = $this->db->query($sql);
         return $query->result_array();
+    }
+
+    /**
+     * 根据条件获取专题或者系列信息
+     * @param $conditionStr
+     * @return array
+     */
+    public function getTopicInfoByCon($conditionStr) {
+        if (empty($conditionStr)) {
+            return array();
+        }
+        $sql = "select * from `tbl_movieTopic` where {$conditionStr};";
+        $query = $this->db->query($sql);
+        $result = $query->result_array();
+        return $result;
     }
 }

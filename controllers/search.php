@@ -12,6 +12,8 @@ class Search extends MY_Controller {
         $this->load->model('Directorinfo');
         $this->load->model('Character');
         $this->load->model("Wordsplit");
+        $this->load->model("Movietopic");
+        $this->load->model("Movietopicmovie");
         $this->load->set_top_index(-1);
     }
 
@@ -330,7 +332,7 @@ class Search extends MY_Controller {
         $searchMovieInfo = $this->_initArr($searchMovieInfo,$ids);
         //介绍截取
         foreach($searchMovieInfo as $infoKey => $infoVal) {
-            $searchMovieInfo[$infoKey]['jieshao'] = $this->splitStr($infoVal['jieshao'],100);
+            $searchMovieInfo[$infoKey]['jieshao'] = $this->splitStr($infoVal['jieshao'],200);
         }
         return array($searchMovieInfo,$ids);
     }
@@ -376,14 +378,24 @@ class Search extends MY_Controller {
             $this->set_attr("xingzuoInfo",$xingzuoInfo);
         }
 
+        //系列或专题
+        $topicContionStr = "name = '" . $searchW . "' and status = 1";
+        $topicInfo = $this->Movietopic->getTopicInfoByCon($topicContionStr);
+        if (!empty($topicInfo)) {
+            //将id作为数组key
+            $topicInfo = $this->initArrById($topicInfo,"id",$topicIdArr);
+            //电影信息，用作计算电影总部数
+            $topicMovieCountList = $this->Movietopicmovie->getTopicMovieCountByTopicId($topicIdArr);
+            $topicInfo = $this->_initMovieCount($topicInfo,$topicMovieCountList);
+            $this->set_attr("topicInfo",$topicInfo);
+            //星座信息
+            $xingzuoInfo = APF::get_instance()->get_config_value("constellatoryInfo");
+            $this->set_attr("xingzuoInfo",$xingzuoInfo);
+        }
+
         //搜索处理
         list($searchMovieInfo,$ids) = $this->_searchMian($searchW,$type,$year,$diqu,50);
         $this->set_attr("searchMovieInfo",$searchMovieInfo);
-
-        //观看链接
-        $watchLinkInfo = $this->Backgroundadmin->getWatchLinkInfoByInfoId($ids);
-        $watchLinkInfo = $this->_getNewArrById($watchLinkInfo);
-        $this->set_attr("watchLinkInfo",$watchLinkInfo);
 
         $this->load->set_head_img(false);
         $this->load->set_title("搜'{$searchW}'相关的影片 - " . $this->base_title . " - " . APF::get_instance()->get_config_value("base_name"));
@@ -478,4 +490,19 @@ class Search extends MY_Controller {
         return $result;
     }
 
+    /**
+     * 拼接电影部数
+     * @param $topicList
+     * @param $topicMovieList
+     * @return mixed
+     */
+    private function _initMovieCount($topicList,$topicMovieList) {
+        if (empty($topicList) || empty($topicMovieList)) {
+            return $topicList;
+        }
+        foreach($topicMovieList as $topicVal) {
+            $topicList[$topicVal['topicId']]['movieCount'] = $topicVal['cn'];
+        }
+        return $topicList;
+    }
 }

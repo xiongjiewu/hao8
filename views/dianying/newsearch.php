@@ -109,22 +109,53 @@
     <?php endif;?>
     <div class="search_dy_info">
         <ul>
+            <?php if (!empty($topicInfo)):?>
+                <?php $i = 0;?>
+                <?php foreach($topicInfo as $topicVal):?>
+                    <?php $url = APF::get_instance()->get_real_url("/series/info/",$topicVal['id'],array(),true);?>
+                    <li <?php if ($i == 0):?>class="first_one"<?php endif;?> title="点击查看详情">
+                        <div class="search_dy_img">
+                            <a href="<?php echo $url;?>">
+                                <img alt="<?php echo $topicVal['name'];?>" src="<?php echo APF::get_instance()->get_image_url($topicVal['mImg'],"dy",200);?>">
+                            </a>
+                        </div>
+                        <div class="search_dy_detail">
+                            <p class="title">
+                                <a href="<?php echo $url;?>">
+                                    <em><?php echo $topicVal['name'];?></em><b><?php if ($topicVal['topicType'] == 2):?>[系列]<?php else:?>[专题]<?php endif;?></b>
+                                </a>
+                                <span class="nianfen">共<em><?php echo $topicVal['movieCount'];?></em>部</span>
+                            </p>
+                            <p class="other">
+                                <span>类型：</span><?php echo $movieType[$topicVal['type']];?>
+                            </p>
+                            <p class="other">
+                                <span>地区：</span><?php echo $moviePlace[$topicVal['diqu']];?>
+                            </p>
+                            <p class="jianjie">
+                                <span>简介：</span><?php echo APF::get_instance()->splitStr(strip_tags($topicVal['bTitle']),200);?>
+                            </p>
+                        </div>
+                    </li>
+                    <?php $i++;?>
+                <?php endforeach;?>
+            <?php endif;?>
             <?php if (!empty($searchMovieInfo)):?>
                 <?php $i = 0;?>
                 <?php foreach($searchMovieInfo as $movieVal):?>
-                    <?php $idStr = APF::get_instance()->encodeId($movieVal['id']);?>
+                    <?php $url = APF::get_instance()->get_real_url("detail",$movieVal['id'],array("from" => "search"));?>
                     <?php $zhuyaoArr = explode("、",$movieVal['zhuyan']);?>
                     <?php $daoyanArr = explode("、",$movieVal['daoyan']);?>
                     <?php if (!empty($movieVal['time1'])){$movieVal['nianfen'] = date("Y",$movieVal['time1']);}?>
                     <li <?php if ($i == 0):?>class="first_one"<?php endif;?> title="点击查看详情">
                         <div class="search_dy_img">
-                            <a href="<?php echo get_url("/detail/index/{$idStr}?from=search");?>">
+                            <a href="<?php echo $url;?>">
                                 <img alt="<?php echo $movieVal['name'];?>" src="<?php echo APF::get_instance()->get_image_url($movieVal['image'],"dy",200);?>">
                             </a>
                         </div>
                         <div class="search_dy_detail">
                             <p class="title">
-                                <a href="<?php echo get_url("/detail/index/{$idStr}?from=search");?>">
+                                <a href="<?php echo $url;?>">
                                     <?php echo $movieVal['s_name'];?>
                                 </a>
                                 <?php if (!empty($movieVal['nianfen'])):?>
@@ -166,28 +197,11 @@
                             <p class="jianjie">
                                 <span>简介：</span><?php echo strip_tags($movieVal['jieshao']);?>
                             </p>
-                            <?php if (!empty($watchLinkInfo[$movieVal['id']])):?>
-                            <p class="watch_link">
-                                <?php $wRes = array();?>
-                                <?php foreach ($watchLinkInfo[$movieVal['id']] as $watchKey => $watchVal): ?>
-                                    <?php if (empty($wRes[$watchVal['player']]) && !empty($watchVal['link'])){$wRes[$watchVal['player']] = $watchVal;}?>
-                                <?php endforeach;?>
-                                <?php $countI = 1;?>
-                                <?php foreach($wRes as $wInfo):?>
-                                    <?php if ($countI > 8){break;}?>
-                                    <?php $url = APF::get_instance()->get_real_url("play",$wInfo['infoId'],array("id"=>$wInfo['id']));?>
-                                    <a title="点击观看(<?php if ($wInfo['shoufei'] == 1):?>免费<?php else:?>收费<?php endif;?>)" target="_blank" href="<?php echo $url;?>">
-                                        <img alt="<?php echo $movieVal['name'];?>" src="/images/webcon/icon<?php echo $wInfo['player'];?>.png">
-                                    </a>
-                                    <?php $countI++;?>
-                                <?php endforeach;?>
-                            </p>
-                            <?php endif;?>
                         </div>
                     </li>
                     <?php $i++;?>
                 <?php endforeach;?>
-                <?php elseif (empty($peopleInfo)):?>
+                <?php elseif (empty($peopleInfo) && empty($topicInfo)):?>
                     <li class="no_data">
                         <div class="error_imga">
                             <img src="/images/error.png">
