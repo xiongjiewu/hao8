@@ -37,7 +37,7 @@
                                 <div class="doing"></div>
                                 <span class="btn shangchuan">上传头像</span>
                                 <span class="btn upload">上传</span>
-                                <span class="btn cancel">取消</span>
+                                <span class="btn cancel" style="display: none;">取消</span>
                                 <form name="userphone" id="userphone" target="upload_frame" method="post" action="<?php echo rtrim(get_url(APF::get_instance()->get_config_value("image_upload_url")),"/") . "/index/{$userId}/user";?>" autocomplete="off" enctype="multipart/form-data">
                                     <input type="file" size="1" class="image" name="image" id="image">
                                     <input type="hidden" name="moren_img" id="moren_img" value="<?php echo $userImage;?>">
