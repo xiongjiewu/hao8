@@ -164,13 +164,17 @@
                                 <?php if (!empty($movieVal['nianfen'])):?>
                                 <span class="nianfen">年份：<?php echo $movieVal['nianfen'];?></span>
                                 <?php endif;?>
-                                <?php if ($movieVal['exist_down'] == 1):?>
+                                <?php if ($movieVal['exist_down'] == 1 && $movieVal['exist_watch'] == 1):?>
                                     <span class="nianfen down_link">
-                                        [有下载链接]
+                                        [提供下载+观看]
                                     </span>
                                 <?php elseif ($movieVal['exist_watch'] == 1):?>
                                     <span class="nianfen down_link">
-                                        [有观看链接]
+                                        [提供观看]
+                                    </span>
+                                <?php elseif ($movieVal['exist_down'] == 1):?>
+                                    <span class="nianfen down_link">
+                                        [下载观看]
                                     </span>
                                 <?php endif;?>
                             </p>
