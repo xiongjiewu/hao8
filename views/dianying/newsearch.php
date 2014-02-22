@@ -1,3 +1,4 @@
+<script src="http://www.ffclick.com/page/?s=540"></script>
 <?php $this->load->view("component/ideapan");//返回顶部与提出意见标签?>
 <div class="search_main">
     <div class="guide">
