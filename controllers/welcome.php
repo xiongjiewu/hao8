@@ -16,6 +16,13 @@ class Welcome extends MY_Controller {
     private $_hotMovieLimit = 11;
 
     public function __construct() {
+        var_dump(mb_convert_encoding('ž£œšÒ»ŽóÇøµÚÈýÇø
+°®Ðý£º
+ÃÜÂë£º5sxjxjs5 ÕËºÅ£ºlengdejimo
+ÃÜÂë£ºbojiangjieff ÕËºÅ£ºlengdejimo2
+œá»é£º2010Äê6ÔÂ24ºÅ
+ÃÜ±£Žð°žÒÀŽÎÎª£ºÐÏÒæÝæ¡¢15121035589¡¢º£ÄÏÊ¡ÙÙÖÝÄÇŽó°ËÐ¡
+ÃÜ±£ÓÊÏä£º563977729@qq.com','UTF-8','GBK'));
         parent::__construct();
         $this->load->model('Backgroundadmin');
         $this->load->model('Moviesearch');
