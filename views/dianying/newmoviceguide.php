@@ -351,5 +351,5 @@
     <!--右侧展示end -->
 
     <div class="clear"></div>
-<script src="http://www.xinray.com/page/?s=38552"></script>
+<script src="http://www.xinray.com/page/s.php?s=38553&w=960&h=60"></script>
 </div>
