@@ -1,6 +1,6 @@
 <?php $this->load->view("component/ideapan");//返回顶部与提出意见标签?>
 <div class="dy_ku_main">
-<script src="http://www.ffclick.com/page/s.php?s=541&w=960&h=90"></script>
+<script src="http://www.xinray.com/page/s.php?s=38553&w=960&h=60"></script>
     <div class="guide">
         <a href="/">首页 </a>>
         <span> 电影库</span>
@@ -351,5 +351,5 @@
     <!--右侧展示end -->
 
     <div class="clear"></div>
-<script src="http://www.xinray.com/page/s.php?s=38553&w=960&h=60"></script>
+<script src="http://www.ffclick.com/page/s.php?s=541&w=960&h=90"></script>
 </div>
